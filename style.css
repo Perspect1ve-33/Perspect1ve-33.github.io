@@ -27,7 +27,7 @@ body {
   height: 100px;
   position: relative;
   transform-style: preserve-3d;
-  animation: rotate 5s infinite linear;
+  animation: rotate 1300ms infinite linear;
 }
 
 .face {
