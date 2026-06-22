@@ -1,0 +1,518 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Jost:wght@300;400;500&display=swap');
+
+:root {
+  --hazel:      #8E7455;
+  --whitesmoke: #F5F5F5;
+  --lightbrown: #C4A882;
+  --beige:      #F0E6D3;
+  --dark:       #3E2F1C;
+  --shadow:     rgba(62, 47, 28, 0.15);
+}
+
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'Jost', sans-serif;
+  background-color: var(--whitesmoke);
+  color: var(--dark);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background-color: var(--beige);
+  border-bottom: 1px solid var(--lightbrown);
+  box-shadow: 0 2px 12px var(--shadow);
+  padding: 0 55px;
+}
+
+nav.menu {
+  display: flex;
+  align-items: center;
+  height: 68px;
+  gap: 0.5rem;
+}
+
+a.menu_logo {
+  display: flex;
+  align-items: center;
+  margin-right: auto;
+  text-decoration: none;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--hazel);
+  letter-spacing: 0.08em;
+  gap: 0.4rem;
+}
+
+a.menu_logo img {
+  height: 36px;
+  width: auto;
+  object-fit: contain;
+}
+
+.menu_link,
+.menu_link-active {
+  padding: 6px 10px;
+  color: var(--dark);
+  text-decoration: none;
+  font-size: 0.83rem;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  position: relative;
+  transition: color 0.25s;
+  white-space: nowrap;
+}
+
+.menu_link::after,
+.menu_link-active::after {
+  content: '';
+  position: absolute;
+  bottom: 0; left: 10px;
+  width: 0;
+  height: 2px;
+  background: var(--hazel);
+  transition: width 0.3s;
+}
+
+.menu_link-active {
+  color: var(--hazel);
+  font-weight: 600;
+}
+
+.menu_link-active::after { width: calc(100% - 20px); }
+.menu_link:hover { color: var(--hazel); }
+.menu_link:hover::after { width: calc(100% - 20px); }
+
+.welcome {
+  flex: 1;
+  padding: 5rem 55px 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.welcome_text { max-width: 450px; }
+
+.welcome_text p {
+  font-size: 1.05rem;
+  line-height: 1.75;
+  color: #6b5744;
+  margin-top: 0.5rem;
+}
+
+.welcome_header {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(2.6rem, 5vw, 4rem);
+  font-weight: 700;
+  line-height: 1.1;
+  color: var(--dark);
+  margin-bottom: 1rem;
+}
+
+.welcome_header span { color: var(--hazel); }
+
+.welcome_button {
+  display: inline-block;
+  margin-top: 2rem;
+  padding: 0.85rem 2.4rem;
+  background-color: var(--hazel);
+  color: var(--whitesmoke);
+  border-radius: 4px;
+  text-decoration: none;
+  font-size: 0.82rem;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  box-shadow: 0 4px 16px var(--shadow);
+  transition: background 0.25s, transform 0.2s, box-shadow 0.25s;
+}
+
+.welcome_button:hover {
+  background-color: var(--dark);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px var(--shadow);
+}
+
+.welcome_image {
+  max-width: 100%;
+  width: 480px;
+  border-radius: 8px;
+  object-fit: cover;
+  display: block;
+}
+
+
+.drinks {
+  background: var(--beige);
+  padding: 5rem 55px;
+}
+
+.drinks_inner {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.drinks_title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 700;
+  color: var(--dark);
+  margin-bottom: 2.8rem;
+  text-align: center;
+}
+
+.drinks_title span { color: var(--hazel); }
+
+.drinks_grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.8rem;
+}
+
+.drink_card {
+  background: var(--whitesmoke);
+  border-radius: 6px;
+  overflow: hidden;
+  box-shadow: 0 4px 18px var(--shadow);
+  display: flex;
+  flex-direction: column;
+}
+
+.drink_card img {
+  width: 100%;
+  aspect-ratio: 4/3;
+  object-fit: cover;
+  display: block;
+}
+
+.drink_card-text {
+  padding: 1.4rem 1.5rem 1.8rem;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.drink_card-text h3 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: var(--dark);
+  margin-bottom: 0.6rem;
+}
+
+.drink_card-text p {
+  font-size: 0.88rem;
+  line-height: 1.7;
+  color: #6b5744;
+  flex: 1;
+  margin-bottom: 1.2rem;
+}
+
+.drink_link {
+  text-decoration: none;
+  font-size: 0.78rem;
+  font-weight: 500;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  color: var(--hazel);
+  align-self: flex-start;
+}
+
+.drink_link:hover { color: var(--dark); }
+
+
+.footer {
+  width: 100%;
+  padding: 4rem 15%;
+  background-color: var(--dark);
+  color: var(--lightbrown);
+  display: flex;
+  gap: 3rem;
+}
+
+.footer div {
+  text-align: center;
+  flex: 1;
+}
+
+.col-2 { flex: 2; }
+
+.footer div h3 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--beige);
+  margin-bottom: 1.4rem;
+  padding-bottom: 0.6rem;
+  border-bottom: 1px solid var(--hazel);
+}
+
+.col-1 a {
+  display: block;
+  text-decoration: none;
+  color: var(--lightbrown);
+  margin-bottom: 0.6rem;
+  font-size: 0.9rem;
+  transition: color 0.2s, padding-left 0.2s;
+}
+
+.col-1 a:hover {
+  color: var(--beige);
+  padding-left: 0.4rem;
+}
+
+form input[type="email"] {
+  width: 100%;
+  max-width: 360px;
+  height: 45px;
+  border-radius: 4px;
+  text-align: center;
+  margin-bottom: 1rem;
+  outline: none;
+  border: 1px solid var(--hazel);
+  background: rgba(255, 255, 255, 0.07);
+  color: var(--whitesmoke);
+  font-family: 'Jost', sans-serif;
+  font-size: 0.88rem;
+  transition: border-color 0.2s, background 0.2s;
+}
+
+form input[type="email"]::placeholder { color: #9a8474; }
+
+form input[type="email"]:focus {
+  border-color: var(--lightbrown);
+  background: rgba(255, 255, 255, 0.11);
+}
+
+form button[type="submit"] {
+  background: var(--hazel);
+  border: 2px solid var(--hazel);
+  color: var(--whitesmoke);
+  border-radius: 4px;
+  padding: 10px 30px;
+  font-family: 'Jost', sans-serif;
+  font-size: 0.8rem;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background 0.25s, border-color 0.25s, transform 0.2s;
+}
+
+form button[type="submit"]:hover {
+  background: var(--lightbrown);
+  border-color: var(--lightbrown);
+  transform: translateY(-1px);
+}
+
+.col-3 p {
+  font-size: 0.9rem;
+  line-height: 1.9;
+  color: var(--lightbrown);
+}
+
+.footer_bar {
+  text-align: center;
+  padding: 1.5rem 15% 1rem;
+  font-size: 0.78rem;
+  color: #6b5744;
+  background-color: var(--dark);
+  letter-spacing: 0.04em;
+  border-top: 1px solid rgba(142, 116, 85, 0.25);
+}
+
+.pricelist {
+  background: var(--whitesmoke);
+  padding: 5rem 55px;
+}
+
+.pricelist_inner {
+  max-width: 700px;
+  margin: 0 auto;
+  padding-bottom: 10px;
+}
+
+.pricelist_title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 700;
+  color: var(--dark);
+  margin-bottom: 2.8rem;
+  text-align: center;
+}
+
+.pricelist_title span { color: var(--hazel); }
+
+.pricelist_grid {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.pricelist_item {
+  display: flex;
+  align-items: baseline;
+  gap: 1rem;
+  padding: 1rem 0;
+  border-bottom: 1px solid var(--lightbrown);
+}
+
+.pricelist_item:first-child { border-top: 1px solid var(--lightbrown); }
+
+.pricelist_name {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--dark);
+  white-space: nowrap;
+}
+
+.pricelist_dots {
+  flex: 1;
+  border-bottom: 0.5px dotted var(--lightbrown);
+  margin-bottom: 10zpx;
+}
+
+.pricelist_price {
+  font-family: 'Jost', sans-serif;
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: var(--hazel);
+  white-space: nowrap;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.5rem 1.4rem;  
+  border-radius: 4px;
+  text-decoration: none;
+  font-size: 0.78rem;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  transition: background 0.25s, transform 0.2s, opacity 0.5s;
+}
+
+.floating_buttons {
+  position: fixed;   
+  bottom: 2rem;
+  right: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  z-index: 99;
+}
+
+.btn-filled {
+  background: rgba(142, 116, 85, 0.5);  
+  color: var(--whitesmoke);
+}
+
+.btn-outline {
+  background: rgba(245, 245, 245, 0.15);
+  color: var(--hazel);
+  border: 2px solid var(--hazel);
+}
+
+.btn-filled:hover {
+  background: rgba(142, 116, 85, 0.85);
+  transform: translateY(-5px);
+}
+
+.btn-outline:hover {
+  background: rgba(245, 245, 245, 0.3);
+  transform: translateY(-5px);
+}
+
+.seasonal {
+  background: var(--beige);
+  padding: 5rem 55px;
+}
+
+.seasonal_inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 4rem;
+}
+
+.seasonal_inner img {
+  width: 480px;
+  max-width: 100%;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.seasonal_text h2 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 700;
+  color: var(--dark);
+  margin-bottom: 1rem;
+}
+
+.seasonal_text h2 span { color: var(--hazel); }
+
+.seasonal_text p {
+  font-size: 1.05rem;
+  line-height: 1.75;
+  color: #6b5744;
+  margin-bottom: 2rem;
+}
+
+@media (max-width: 900px) {
+
+  header { padding: 0 1.5rem; }
+
+  .welcome {
+  flex-direction: column;
+  padding: 3rem 1.5rem 2.5rem;
+  text-align: center;
+  gap: 2.5rem;
+  }
+
+.welcome_text p { margin: 0.5rem auto 0; }
+  .welcome_image { width: 100%; }
+
+.drinks { padding: 3.5rem 1.5rem; }
+  .drinks_grid { grid-template-columns: repeat(2, 1fr); }
+  
+.footer {
+    flex-direction: column;
+    padding: 3rem 8%;
+    gap: 2.5rem;  
+
+  .drinks_grid { grid-template-columns: 1fr; }
+
+  .seasonal { padding: 3.5rem 1.5rem; }
+  .seasonal_inner { flex-direction: column; }
+  .seasonal_inner img { width: 100%; }
+
+  .pricelist { margin: 10px }
+  .pricelist { padding: 3.5rem 1.5rem; }
+
+  .floating_buttons {
+    bottom: 1rem;
+    right: 1rem;
+  }
+}

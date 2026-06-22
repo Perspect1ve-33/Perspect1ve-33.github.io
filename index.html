@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Our Product</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <nav class="menu">
+      <a href="#" class="menu_logo">Coffee Shop</a>
+      <a href="#welcome_text" class="menu_link-active">Home</a>
+      <a href="#drinks" class="menu_link">Menu</a>
+      <a href="#seasonal" class="menu_link">Something New</a>
+      <a href="#" class="menu_link">Settings ⚙</a>
+    </nav>
+  </header>
+
+  <section class="welcome">
+    <div class="welcome_text" id="welcome_text">
+      <h1 class="welcome_header">About <span>Us</span></h1>
+      <p>Our Coffee — a drink crafted with care, designed to bring warmth and quality into your everyday life.</p>
+      <a href="#drinks" class="welcome_button">Check Out Now</a>
+    </div>
+    <div class="welcome_image-wrap">
+      <img
+        class="welcome_image"
+        src="img/coffee_mug_(2).jpg"
+        alt="Trafalgar Product"
+        onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+      >
+      <div class="img-placeholder" style="display:none;">
+        <svg width="52" height="52" viewBox="0 0 52 52" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect x="4" y="4" width="44" height="44" rx="4" stroke="white" stroke-width="2" stroke-dasharray="6 3"/>
+          <circle cx="18" cy="18" r="5" fill="white" fill-opacity="0.5"/>
+          <path d="M4 34 L16 22 L26 32 L34 24 L48 38" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <span>PRODUCT IMAGE</span>
+      </div>
+    </div>
+  </section>
+
+  <div class="floating_buttons">
+  <a href="#drinks" class="btn btn-filled">Our Drinks</a>
+  <a href="#pricelist" class="btn btn-outline">Price List</a>
+</div>
+
+  <section class="drinks" id="drinks">
+    <div class="drinks_inner">
+      <h2 class="drinks_title">What We <span>Serve</span></h2>
+      <div class="drinks_grid">
+
+        <div class="drink_card">
+          <img src="img/espresso.jpg" alt="Espresso">
+          <div class="drink_card-text">
+            <h3>Espresso</h3>
+            <p>Short, dark, two shots pulled fresh.</p>
+            <a href="#" class="drink_link">Order Now →</a>
+          </div>
+        </div>
+
+        <div class="drink_card">
+          <img src="img/latte.jpg" alt="Caffe Latte">
+          <div class="drink_card-text">
+            <h3>Latte</h3>
+            <p>Espresso with steamed milk, smooth and mild.</p>
+            <a href="#" class="drink_link">Order Now →</a>
+          </div>
+        </div>
+
+        <div class="drink_card">
+          <img src="img/cappuccino.jpg" alt="Cappuccino">
+          <div class="drink_card-text">
+            <h3>Cappuccino</h3>
+            <p>Espresso, steamed milk, thick foam on top.</p>
+            <a href="#" class="drink_link">Order Now →</a>
+          </div>
+        </div>
+
+        <div class="drink_card">
+          <img src="img/cold_brew.jpg" alt="Cold Brew">
+          <div class="drink_card-text">
+            <h3>Cold Brew</h3>
+            <p>Steeped overnight, served over ice.</p>
+            <a href="#" class="drink_link">Order Now →</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="pricelist" id="pricelist">
+  <div class="pricelist_inner">
+    <h2 class="pricelist_title">Price <span>List</span></h2>
+    <div class="pricelist_grid">
+
+      <div class="pricelist_item">
+        <span class="pricelist_name">Espresso</span>
+        <span class="pricelist_dots"></span>
+        <span class="pricelist_price">$2.80</span>
+      </div>
+
+      <div class="pricelist_item">
+        <span class="pricelist_name">Caffe Latte</span>
+        <span class="pricelist_dots"></span>
+        <span class="pricelist_price">$2.80</span>
+      </div>
+
+      <div class="pricelist_item">
+        <span class="pricelist_name">Cappuccino</span>
+        <span class="pricelist_dots"></span>
+        <span class="pricelist_price">$3.50</span>
+      </div>
+
+      <div class="pricelist_item">
+        <span class="pricelist_name">Cold Brew</span>
+        <span class="pricelist_dots"></span>
+        <span class="pricelist_price">$4.00</span>
+      </div>
+
+
+      <section class="seasonal" id="seasonal">
+ 
+      <div class="seasonal_inner" id="seasonal">
+    <img src="img/seasonal.jpg" alt="Seasonal Special">
+    <div class="seasonal_text">
+      <h2>Seasonal <span>Special</span></h2>
+      <p>Chilled, frothy peach frappe — smooth, refreshingly sweet, and perfectly balanced. Served cold with a creamy finish.</p>
+      <a href="#" class="welcome_button">Order <span>Now</span></a>
+    </div>
+  </div>
+</section>
+
+    </div>
+  </div>
+</section>
+  <footer class="footer">
+    <div class="col-1">
+      <h3>Links</h3>
+      <a href="#">About Us</a>
+      <a href="#">Contact Us</a>
+      <a href="#">Services</a>
+      <a href="#">News</a>
+      <a href="#">Bonuses</a>
+    </div>
+    <div class="col-2">
+      <h3>Subscription</h3>
+      <form onsubmit="return false;">
+        <input type="email" placeholder="Your email address" required>
+        <button type="submit">Subscribe Now</button>
+      </form>
+    </div>
+    <div class="col-3">
+      <h3>Find Us</h3>
+      <p>123. ABC st. Apartment 1<br>Almaty. Kazakhstan</p>
+    </div>
+  </footer>
+
+  <p class="footer_bar">© 2026 Coffee Shop. All rights reserved.</p>
+
+</body>
+</html>
