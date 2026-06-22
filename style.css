@@ -389,7 +389,7 @@ form button[type="submit"]:hover {
 .pricelist_dots {
   flex: 1;
   border-bottom: 0.5px dotted var(--lightbrown);
-  margin-bottom: 10zpx;
+  margin-bottom: 10px;
 }
 
 .pricelist_price {
