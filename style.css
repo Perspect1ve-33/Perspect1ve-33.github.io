@@ -511,8 +511,16 @@ form button[type="submit"]:hover {
       align-items: center;
     }
 
-  .seasonal_inner { flex-direction: column; }
+.seasonal_inner {
+    flex-direction: column;
+    text-align: center;
+    gap: 2rem;
+}
   .seasonal_inner img { width: 100%; }
+
+  .seasonal_text {
+    width: 100%;
+}
 
   .pricelist { margin: 10px }
   .pricelist { padding: 3.5rem 1.5rem; }
